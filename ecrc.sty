@@ -130,8 +130,8 @@
        \BottomRule%
 }}
 
-\def\elslogo{\includegraphics{elsevier-logo-\jtype p}}
-\def\sdlogo{\includegraphics{SDlogo-\jtype p}}
+%\def\elslogo{\includegraphics{elsevier-logo-\jtype p}} %Activar para publicaciones en Elsevier
+%\def\sdlogo{\includegraphics{SDlogo-\jtype p}} %Activar para publicaciones en Elsevier
 \def\jnllogo{\IfFileExists{\@jid logo}%
    {\includegraphics{\@jid logo}}%
    {\dummyjnllogo}%
@@ -149,8 +149,8 @@
 
 \def\ps@pprintTitle{%
     \def\@evenhead{%% Even head
-      \setbox1=\hbox{\elslogo}%
-      \setbox2=\hbox{\sdlogo}%
+%      \setbox1=\hbox{\elslogo}% %Activar para publicaciones en Elsevier
+ %     \setbox2=\hbox{\sdlogo}% %Activar para publicaciones en Elsevier
       \setbox3=\hbox{\jnllogo}%
 %      \@tempdima=\textwidth\relax%
 %      \advance \@tempdima - \wd1%
@@ -159,11 +159,11 @@
 %      \showthe\wd1
 %      \showthe\wd2
       \vspace*{2pc}
-      \parbox[t]{\wd1}{\elslogo}
-       \hfil\parbox[t]{19pc}{\centering%
-       \raisebox{23pt}{\sdlogo}\\[-12pt]
+%      \parbox[t]{\wd1}{\elslogo} %Activar para publicaciones en Elsevier
+      \hfil\parbox[t]{19pc}{\centering%
+%       \raisebox{23pt}{\sdlogo}\\[-12pt] %Activar para publicaciones en Elsevier
        \mbox{\footnotesize\@journalname~\@vol~(\the\year)%
-         ~\@firstpage--\lastpage}}\hfil%
+        ~\@firstpage--\lastpage}}\hfil%
         \raisebox{23pt}{\parbox[c]{\wd3}{\jnllogo\\[6pt]
         \ifelsarticle@nsmodel%
          \hspace*{-1.8pc}{\footnotesize www.elsevier.com/locate/procedia}%
